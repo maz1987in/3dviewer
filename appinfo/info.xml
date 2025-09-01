@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>3dviewer</id>
+    <name>3D Viewer</name>
+    <summary>View 3D models in Nextcloud</summary>
+    <description><![CDATA[A Nextcloud app that allows users to view 3D models directly within their Nextcloud instance using Three.js]]></description>
+    <version>1.0.0</version>
+    <licence>mit</licence>
+    <author mail="maz1987in@gmail.com" homepage="https://github.com/maz1987in">maz1987in</author>
+    <namespace>ThreeDViewer</namespace>
+    <category>multimedia</category>
+    <bugs>https://github.com/maz1987in/3dviewer/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="25" max-version="29"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>3D Viewer</name>
+            <route>3dviewer.page.index</route>
+        </navigation>
+    </navigations>
+    <routes>
+        <route>
+            <name>page#index</name>
+            <url>/</url>
+            <verb>GET</verb>
+        </route>
+        <route>
+            <name>page#view</name>
+            <url>/view/{fileId}</url>
+            <verb>GET</verb>
+        </route>
+    </routes>
+    <controllers>
+        <controller>
+            <class>OCA\ThreeDViewer\Controller\PageController</class>
+            <methods>
+                <method>
+                    <name>index</name>
+                    <params></params>
+                </method>
+                <method>
+                    <name>view</name>
+                    <params>
+                        <param>fileId</param>
+                    </params>
+                </method>
+            </methods>
+        </controller>
+    </controllers>
+</info>

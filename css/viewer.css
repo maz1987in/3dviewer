@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+#viewer-app {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+#viewer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: var(--color-text-maxcontrast);
+}
+
+#3d-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#controls button {
+    margin: 5px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#controls button:hover {
+    background-color: var(--color-primary-element-dark);
+}
+
+#info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#model-name {
+    font-weight: bold;
+    color: var(--color-main-text);
+}
